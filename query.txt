@@ -22,6 +22,7 @@ QUERY 6:    SELECT *
             FROM `degrees`
             WHERE `name` LIKE '%Magistrale%';
 
-QUERY 7:
+QUERY 7:    SELECT COUNT(name)
+            FROM `departments`;
 
 QUERY 8: 
