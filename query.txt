@@ -8,7 +8,7 @@ QUERY 2:    SELECT *
 
 QUERY 3:    SELECT *
             FROM `students`
-            WHERE `date_of_birth` < '1993-02-09';  (3517 RISULTATI)
+            WHERE `date_of_birth` < '1993-02-10';  (3517 RISULTATI)
 
 QUERY 4:    SELECT *
             FROM `courses`
