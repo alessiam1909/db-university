@@ -25,4 +25,6 @@ QUERY 6:    SELECT *
 QUERY 7:    SELECT COUNT(name)
             FROM `departments`;
 
-QUERY 8: 
+QUERY 8:    SELECT COUNT(name)
+            FROM `teachers`
+            WHERE `phone` IS NULL;
