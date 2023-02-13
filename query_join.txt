@@ -35,7 +35,17 @@
             JOIN `teachers` 
             ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 
-    ES 6:
+    ES 6:   SELECT DISTINCT `departments`.* , `teachers`.`name` as nome_insegnante, `teachers`.`surname` as cognome_insegnante
+            FROM `departments`
+            JOIN `degrees`
+            ON `degrees`.`department_id` = `departments`.`id`
+            JOIN `courses`
+            ON `courses`.`degree_id` = `degrees`.`id`
+            JOIN `course_teacher`
+            ON `course_teacher`.`course_id` = `courses`.`id`
+            JOIN `teachers`
+            ON `teachers`.`id` = `course_teacher`.`teacher_id`
+            WHERE `departments`.`name` = 'Dipartimento di Matematica';
 
     ES 7 BONUS:
 
