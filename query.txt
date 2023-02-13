@@ -8,7 +8,7 @@ QUERY 2:    SELECT *
 
 QUERY 3:    SELECT *
             FROM `students`
-            WHERE `date_of_birth` < '1993-02-10';  (3519 RISULTATI)
+            WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURDATE()) > 30; 
 
 QUERY 4:    SELECT *
             FROM `courses`
