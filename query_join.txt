@@ -18,7 +18,13 @@
             ON `course_teacher`.`course_id` = `courses`.`id`
             WHERE `course_teacher`.`teacher_id` = 44;
 
-    ES 4: 
+    ES 4:   SELECT `students`.*, `degrees`.`name`, `departments`.`name`
+            FROM `students`
+            JOIN `degrees`
+            ON `students`.`degree_id` = `degrees`.`id`
+            JOIN `departments`
+            ON `degrees`.`department_id` = `departments`.`id`
+            ORDER BY `students`.`surname`, `students`.`name` ASC;
 
     ES 5:
 
