@@ -10,4 +10,6 @@ ES 3:   SELECT AVG(`exam_student`.`vote`) AS media_voti , `exam_student`.`exam_i
         FROM `exam_student`
         GROUP BY `exam_student`.`exam_id`;
 
-ES 4: 
+ES 4:   SELECT COUNT(`degrees`.`name`) AS corsi_presenti, `degrees`.`department_id` AS dipartimento
+        FROM `degrees`
+        GROUP BY `degrees`.`department_id`;
