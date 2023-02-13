@@ -1,3 +1,11 @@
 ES 1:   SELECT COUNT(*) as numero_studenti , YEAR(`students`.`enrolment_date`) as anno_iscrizione
         FROM `students`
         GROUP BY YEAR(`students`.`enrolment_date`);
+
+ES 2:   SELECT COUNT(*) as numero_insegnanti, `teachers`.`office_address` as indirizzo_insegnante
+        FROM `teachers`
+        GROUP BY `teachers`.`office_address`;
+
+ES 3:
+
+ES 4: 
