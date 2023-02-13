@@ -4,7 +4,11 @@
             ON `degrees`.`id` = `students`.`degree_id`
             WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
 
-    ES 2: 
+    ES 2:   SELECT `degrees`.*, `departments`.`name` as nome_dipartimento
+            FROM `degrees`
+            JOIN `departments`
+            ON `degrees`.`department_id` = `departments`.`id`
+            WHERE `degrees`.`level` = 'magistrale' AND `departments`.`name` = 'Dipartimento di Neuroscienze';
 
     ES 3:
 
