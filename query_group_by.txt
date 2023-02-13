@@ -6,6 +6,8 @@ ES 2:   SELECT COUNT(*) as numero_insegnanti, `teachers`.`office_address` as ind
         FROM `teachers`
         GROUP BY `teachers`.`office_address`;
 
-ES 3:
+ES 3:   SELECT AVG(`exam_student`.`vote`) AS media_voti , `exam_student`.`exam_id`
+        FROM `exam_student`
+        GROUP BY `exam_student`.`exam_id`;
 
 ES 4: 
