@@ -26,7 +26,14 @@
             ON `degrees`.`department_id` = `departments`.`id`
             ORDER BY `students`.`surname`, `students`.`name` ASC;
 
-    ES 5:
+    ES 5:   SELECT `degrees`.*, `courses`.`name` as nome_corso, `teachers`.`name` as nome_insegnante, `teachers`.`surname` as cognome_insegnante
+            FROM `degrees`
+            JOIN `courses`
+            ON `degrees`.`id` = `courses`.`degree_id`
+            JOIN `course_teacher`
+            ON `course_teacher`.`course_id` = `courses`.`id`
+            JOIN `teachers` 
+            ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 
     ES 6:
 
