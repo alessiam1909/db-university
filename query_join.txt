@@ -10,7 +10,13 @@
             ON `degrees`.`department_id` = `departments`.`id`
             WHERE `degrees`.`level` = 'magistrale' AND `departments`.`name` = 'Dipartimento di Neuroscienze';
 
-    ES 3:
+    ES 3:   SELECT `teachers`.* , `courses`.`name` as nome_corso
+            FROM `teachers`
+            JOIN `course_teacher`
+            ON `course_teacher`.`teacher_id` = `teachers`.`id`
+            JOIN `courses`
+            ON `course_teacher`.`course_id` = `courses`.`id`
+            WHERE `course_teacher`.`teacher_id` = 44;
 
     ES 4: 
 
